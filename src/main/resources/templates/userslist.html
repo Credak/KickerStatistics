@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Vorname</th>
+        <th>Nachname</th>
+    </tr>
+<tr th:each="userslist : ${userslist}">
+    <td th:text="${userslist.getId()}"></td>
+    <td th:text="${userslist.getVorname()}"></td>
+    <td th:text="${userslist.getNachname()}"></td>
+</tr>
+</table>
+</body>
+</html>

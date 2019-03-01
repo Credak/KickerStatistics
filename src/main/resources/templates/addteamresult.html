@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Result</h1>
+<table>
+
+    <tr th:each="team, itemStat : ${team1}">
+        <td th:text="*{team1[__${itemStat.index}__].getVorname() + '' + team1[__${itemStat.index}__].getNachname()}"></td>
+        <td th:text="*{team2[__${itemStat.index}__].getVorname() + '' + team2[__${itemStat.index}__].getNachname()}"></td>
+    </tr>
+</table>
+<a href="/game/addteam">Neue Teams hinzufügen</a>
+</body>
+</html>
